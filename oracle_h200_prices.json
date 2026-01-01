@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-01 15:06:23",
+  "provider": "Oracle",
+  "providers": {
+    "Oracle": {
+      "name": "Oracle Cloud",
+      "url": "https://www.oracle.com/cloud/compute/pricing/",
+      "variants": {
+        "BM.GPU.H200.8 (Oracle)": {
+          "gpu_model": "H200",
+          "gpu_memory": "141GB",
+          "price_per_hour": 10.0,
+          "currency": "USD",
+          "availability": "on-demand"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "BM.GPU.H200.8",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "141GB HBM3e",
+    "gpu_count_per_instance": 8,
+    "pricing_type": "On-Demand (Pay-As-You-Go)",
+    "source": "https://www.oracle.com/cloud/compute/pricing/"
+  }
+}

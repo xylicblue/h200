@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-01 14:56:21",
+  "provider": "GCP",
+  "providers": {
+    "GCP": {
+      "name": "Google Cloud",
+      "url": "https://cloud.google.com/compute/gpus-pricing",
+      "variants": {
+        "A3-Ultra (GCP)": {
+          "gpu_model": "H200",
+          "gpu_memory": "141GB",
+          "price_per_hour": 11.07,
+          "currency": "USD",
+          "availability": "on-demand"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "a3-ultragpu-8g",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "141GB HBM3e",
+    "gpu_count_per_instance": 8,
+    "pricing_type": "On-Demand",
+    "source": "https://cloud.google.com/compute/gpus-pricing"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-01 14:53:07",
+  "provider": "Azure",
+  "providers": {
+    "Azure": {
+      "name": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+      "variants": {
+        "ND96isr_H200_v5 (Azure)": {
+          "gpu_model": "H200",
+          "gpu_memory": "141GB",
+          "price_per_hour": 12.57,
+          "currency": "USD",
+          "availability": "on-demand"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "Standard_ND96isr_H200_v5",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "141GB HBM3e",
+    "gpu_count_per_instance": 8,
+    "pricing_type": "On-Demand (Linux)",
+    "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+  }
+}
