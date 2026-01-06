@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-01-06 17:55:59",
+  "provider": "Civo",
+  "providers": {
+    "Civo": {
+      "name": "Civo Cloud",
+      "url": "https://www.civo.com/ai/h200-gpu",
+      "variants": {
+        "H200 Small 1x (Civo)": {
+          "gpu_model": "H200",
+          "gpu_memory": "80GB",
+          "price_per_hour": 2.99,
+          "currency": "USD",
+          "availability": "on-demand"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "Small (1x GPU)",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "80GB",
+    "ram": "192 GB",
+    "vcpus": 48,
+    "storage": "400 GB NVMe",
+    "gpu_count_per_instance": 1,
+    "pricing_type": "Commitment (36 months)",
+    "on_demand_price": 3.49,
+    "commitment_prices": {
+      "6_months": 3.29,
+      "12_months": 3.19,
+      "24_months": 3.09,
+      "36_months": 2.99
+    },
+    "source": "https://www.civo.com/ai/h200-gpu"
+  }
+}

@@ -1,0 +1,1179 @@
+{
+  "timestamp": "2026-01-06 18:10:13",
+  "total_providers": 33,
+  "providers": {
+    "AceCloud": {
+      "source_file": "acecloud_h200_prices.json",
+      "price_per_hour": 3.35,
+      "data": {
+        "timestamp": "2026-01-05 22:36:21",
+        "provider": "AceCloud",
+        "providers": {
+          "AceCloud": {
+            "name": "AceCloud (India)",
+            "url": "https://acecloud.ai/pricing/linux/inr/noida/nvidia-h200-nvl/",
+            "variants": {
+              "H200 (AceCloud)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 3.35,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Various (1x, 2x, 4x H200)",
+          "gpu_model": "NVIDIA H200 NVL",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "Monthly (converted to hourly)",
+          "original_currency": "INR",
+          "original_price_inr_monthly": 220000.0,
+          "exchange_rate_inr_to_usd": 0.0111,
+          "location": "Noida, India",
+          "source": "https://acecloud.ai/pricing/linux/inr/noida/nvidia-h200-nvl/"
+        }
+      }
+    },
+    "AIME": {
+      "source_file": "aime_h200_prices.json",
+      "price_per_hour": 6.26,
+      "data": {
+        "timestamp": "2026-01-06 17:23:16",
+        "provider": "AIME",
+        "providers": {
+          "AIME": {
+            "name": "AIME GPU Cloud",
+            "url": "https://www.aime.info/en/gpucloud/",
+            "variants": {
+              "H200 NVL 141GB (AIME)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 6.26,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Virtual Server (1x GPU)",
+          "gpu_model": "NVIDIA H200 NVL",
+          "gpu_memory": "141GB",
+          "cpu": "30 vCores (Epyc Turin)",
+          "ram": "192 GB ECC",
+          "storage": "4 TB NVMe SSD",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Half-yearly plan (monthly rate)",
+          "original_currency": "EUR",
+          "original_price_eur": 5.35,
+          "exchange_rate_eur_to_usd": 1.17,
+          "source": "https://www.aime.info/en/gpucloud/"
+        }
+      }
+    },
+    "Akash": {
+      "source_file": "akash_h200_prices.json",
+      "price_per_hour": 2.9,
+      "data": {
+        "timestamp": "2026-01-06 17:48:24",
+        "provider": "Akash",
+        "providers": {
+          "Akash": {
+            "name": "Akash Network",
+            "url": "https://akash.network/pricing/gpus/",
+            "variants": {
+              "H200 SXM5 (Akash)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.9,
+                "currency": "USD",
+                "availability": "decentralized"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Decentralized Cloud",
+          "gpu_model": "NVIDIA H200 SXM5",
+          "gpu_memory": "141Gi",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Variable (marketplace)",
+          "price_statistics": {
+            "average": 2.9,
+            "minimum": 2.8,
+            "maximum": 2.9
+          },
+          "availability": {
+            "available": 538,
+            "total": 80
+          },
+          "source": "https://akash.network/pricing/gpus/"
+        }
+      }
+    },
+    "AWS": {
+      "source_file": "aws_h200_prices.json",
+      "price_per_hour": 7.91,
+      "data": {
+        "timestamp": "2026-01-01 14:50:14",
+        "provider": "AWS",
+        "providers": {
+          "AWS": {
+            "name": "AWS",
+            "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+            "variants": {
+              "P5en.48xlarge (AWS)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 7.91,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "P5en.48xlarge",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand",
+          "source": "https://aws.amazon.com/ec2/pricing/on-demand/"
+        }
+      }
+    },
+    "Azure": {
+      "source_file": "azure_h200_prices.json",
+      "price_per_hour": 12.57,
+      "data": {
+        "timestamp": "2026-01-01 14:53:07",
+        "provider": "Azure",
+        "providers": {
+          "Azure": {
+            "name": "Microsoft Azure",
+            "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+            "variants": {
+              "ND96isr_H200_v5 (Azure)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 12.57,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Standard_ND96isr_H200_v5",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand (Linux)",
+          "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+        }
+      }
+    },
+    "Civo": {
+      "source_file": "civo_h200_prices.json",
+      "price_per_hour": 2.99,
+      "data": {
+        "timestamp": "2026-01-06 17:55:59",
+        "provider": "Civo",
+        "providers": {
+          "Civo": {
+            "name": "Civo Cloud",
+            "url": "https://www.civo.com/ai/h200-gpu",
+            "variants": {
+              "H200 Small 1x (Civo)": {
+                "gpu_model": "H200",
+                "gpu_memory": "80GB",
+                "price_per_hour": 2.99,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Small (1x GPU)",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "80GB",
+          "ram": "192 GB",
+          "vcpus": 48,
+          "storage": "400 GB NVMe",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Commitment (36 months)",
+          "on_demand_price": 3.49,
+          "commitment_prices": {
+            "6_months": 3.29,
+            "12_months": 3.19,
+            "24_months": 3.09,
+            "36_months": 2.99
+          },
+          "source": "https://www.civo.com/ai/h200-gpu"
+        }
+      }
+    },
+    "ComputeThisHub": {
+      "source_file": "computethishub_h200_prices.json",
+      "price_per_hour": 3.5,
+      "data": {
+        "timestamp": "2026-01-06 17:15:15",
+        "provider": "ComputeThisHub",
+        "providers": {
+          "ComputeThisHub": {
+            "name": "ComputeThisHub",
+            "url": "https://computethishub.com/",
+            "variants": {
+              "H200 4x (ComputeThisHub)": {
+                "gpu_model": "H200",
+                "gpu_memory": "140GB",
+                "price_per_hour": 3.5,
+                "currency": "USD",
+                "availability": "dedicated"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Dedicated Bare Metal",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "140GB",
+          "gpu_count_per_instance": 4,
+          "total_instance_price": 14.0,
+          "pricing_type": "Dedicated",
+          "location": "Europe",
+          "source": "https://computethishub.com/"
+        }
+      }
+    },
+    "CoreWeave": {
+      "source_file": "coreweave_h200_prices.json",
+      "price_per_hour": 6.5,
+      "data": {
+        "timestamp": "2026-01-02 14:25:27",
+        "provider": "CoreWeave",
+        "providers": {
+          "CoreWeave": {
+            "name": "CoreWeave",
+            "url": "https://www.coreweave.com/pricing",
+            "variants": {
+              "H200 (CoreWeave)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 6.5,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.coreweave.com/pricing"
+        }
+      }
+    },
+    "Crusoe": {
+      "source_file": "crusoe_h200_prices.json",
+      "price_per_hour": 4.29,
+      "data": {
+        "timestamp": "2026-01-02 16:57:10",
+        "provider": "Crusoe",
+        "providers": {
+          "Crusoe": {
+            "name": "Crusoe",
+            "url": "https://www.crusoe.ai/cloud/pricing",
+            "variants": {
+              "H200 (Crusoe)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 4.29,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Fal.ai": {
+      "source_file": "falai_h200_prices.json",
+      "price_per_hour": 2.1,
+      "data": {
+        "timestamp": "2026-01-05 20:32:21",
+        "provider": "Fal.ai",
+        "providers": {
+          "Fal.ai": {
+            "name": "Fal.ai",
+            "url": "https://fal.ai/pricing",
+            "variants": {
+              "H200 141GB (Fal.ai)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.1,
+                "currency": "USD",
+                "availability": "serverless"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Serverless GPU",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Serverless (Pay-per-use)",
+          "source": "https://fal.ai/pricing"
+        }
+      }
+    },
+    "FluidStack": {
+      "source_file": "fluidstack_h200_prices.json",
+      "price_per_hour": 2.3,
+      "data": {
+        "timestamp": "2026-01-02 16:00:57",
+        "provider": "FluidStack",
+        "providers": {
+          "FluidStack": {
+            "name": "FluidStack",
+            "url": "https://www.fluidstack.io/resources/pricing",
+            "variants": {
+              "H200 (FluidStack)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.3,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.fluidstack.io/resources/pricing"
+        }
+      }
+    },
+    "GCP": {
+      "source_file": "gcp_h200_prices.json",
+      "price_per_hour": 11.07,
+      "data": {
+        "timestamp": "2026-01-01 14:56:21",
+        "provider": "GCP",
+        "providers": {
+          "GCP": {
+            "name": "Google Cloud",
+            "url": "https://cloud.google.com/compute/gpus-pricing",
+            "variants": {
+              "A3-Ultra (GCP)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 11.07,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "a3-ultragpu-8g",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand",
+          "source": "https://cloud.google.com/compute/gpus-pricing"
+        }
+      }
+    },
+    "GMICloud": {
+      "source_file": "gmicloud_h200_prices.json",
+      "price_per_hour": 2.5,
+      "data": {
+        "timestamp": "2026-01-02 16:54:31",
+        "provider": "GMICloud",
+        "providers": {
+          "GMICloud": {
+            "name": "GMI Cloud",
+            "url": "https://www.gmicloud.ai/nvidia-h200",
+            "variants": {
+              "H200 (GMI Cloud)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.5,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.gmicloud.ai/nvidia-h200"
+        }
+      }
+    },
+    "HydraHost": {
+      "source_file": "hydrahost_h200_prices.json",
+      "price_per_hour": 5.0,
+      "data": {
+        "timestamp": "2026-01-02 16:57:12",
+        "provider": "HydraHost",
+        "providers": {
+          "HydraHost": {
+            "name": "HydraHost",
+            "url": "https://hydrahost.com/",
+            "variants": {
+              "H200 (HydraHost)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 5.0,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Hyperbolic": {
+      "source_file": "hyperbolic_h200_prices.json",
+      "price_per_hour": 1.5,
+      "data": {
+        "timestamp": "2026-01-05 22:24:26",
+        "provider": "Hyperbolic",
+        "providers": {
+          "Hyperbolic": {
+            "name": "Hyperbolic AI",
+            "url": "https://www.hyperbolic.ai/marketplace",
+            "variants": {
+              "H200 (Hyperbolic)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 1.5,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "On-Demand GPU",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "On-Demand",
+          "source": "https://www.hyperbolic.ai/marketplace"
+        }
+      }
+    },
+    "HyperStack": {
+      "source_file": "hyperstack_h200_prices.json",
+      "price_per_hour": 3.5,
+      "data": {
+        "timestamp": "2026-01-02 14:26:59",
+        "provider": "HyperStack",
+        "providers": {
+          "HyperStack": {
+            "name": "HyperStack Cloud",
+            "url": "https://www.hyperstack.cloud/gpu-pricing",
+            "variants": {
+              "H200 (HyperStack)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 3.5,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.hyperstack.cloud/gpu-pricing"
+        }
+      }
+    },
+    "IonStream": {
+      "source_file": "ionstream_h200_prices.json",
+      "price_per_hour": 2.06,
+      "data": {
+        "timestamp": "2026-01-06 17:03:03",
+        "provider": "IonStream",
+        "providers": {
+          "IonStream": {
+            "name": "IonStream AI",
+            "url": "https://ionstream.ai/solutions/hosted-h200/",
+            "variants": {
+              "H200 8-GPU Bare Metal (IonStream)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.06,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "8-GPU Bare Metal",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "memory_bandwidth": "4.8TB/s peak",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand",
+          "pricing_unit": "per GPU per hour",
+          "source": "https://ionstream.ai/solutions/hosted-h200/"
+        }
+      }
+    },
+    "Iren": {
+      "source_file": "iren_h200_prices.json",
+      "price_per_hour": 9.7,
+      "data": {
+        "timestamp": "2026-01-02 16:59:04",
+        "provider": "Iren",
+        "providers": {
+          "Iren": {
+            "name": "Iren",
+            "url": "https://iren.com/solutions/gpu-cloud/ai-cloud",
+            "variants": {
+              "H200 (Iren)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 9.7,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        }
+      }
+    },
+    "JarvisLabs": {
+      "source_file": "jarvislabs_h200_prices.json",
+      "price_per_hour": 3.8,
+      "data": {
+        "timestamp": "2026-01-02 16:39:15",
+        "provider": "JarvisLabs",
+        "providers": {
+          "JarvisLabs": {
+            "name": "JarvisLabs",
+            "url": "https://jarvislabs.ai/pricing",
+            "variants": {
+              "H200 (JarvisLabs)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 3.8,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://jarvislabs.ai/pricing"
+        }
+      }
+    },
+    "LeaderGPU": {
+      "source_file": "leadergpu_h200_prices.json",
+      "price_per_hour": 10.4,
+      "data": {
+        "timestamp": "2026-01-05 20:59:24",
+        "provider": "LeaderGPU",
+        "providers": {
+          "LeaderGPU": {
+            "name": "LeaderGPU",
+            "url": "https://www.leadergpu.com/",
+            "variants": {
+              "H200 141GB (LeaderGPU)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 10.4,
+                "currency": "USD",
+                "availability": "dedicated"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Dedicated Server",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Dedicated (Daily/Monthly)",
+          "original_price_eur_daily": 213.35,
+          "exchange_rate_eur_to_usd": 1.17,
+          "location": "The Netherlands",
+          "source": "https://www.leadergpu.com/"
+        }
+      }
+    },
+    "Nebius": {
+      "source_file": "nebius_h200_prices.json",
+      "price_per_hour": 2.3,
+      "data": {
+        "timestamp": "2026-01-02 16:01:13",
+        "provider": "Nebius",
+        "providers": {
+          "Nebius": {
+            "name": "Nebius",
+            "url": "https://nebius.com/prices",
+            "variants": {
+              "H200 (Nebius)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.3,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://nebius.com/prices"
+        }
+      }
+    },
+    "Oracle": {
+      "source_file": "oracle_h200_prices.json",
+      "price_per_hour": 10.0,
+      "data": {
+        "timestamp": "2026-01-01 15:06:23",
+        "provider": "Oracle",
+        "providers": {
+          "Oracle": {
+            "name": "Oracle Cloud",
+            "url": "https://www.oracle.com/cloud/compute/pricing/",
+            "variants": {
+              "BM.GPU.H200.8 (Oracle)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 10.0,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "BM.GPU.H200.8",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand (Pay-As-You-Go)",
+          "source": "https://www.oracle.com/cloud/compute/pricing/"
+        }
+      }
+    },
+    "Ori": {
+      "source_file": "ori_h200_prices.json",
+      "price_per_hour": 2.9,
+      "data": {
+        "timestamp": "2026-01-02 16:55:01",
+        "provider": "Ori",
+        "providers": {
+          "Ori": {
+            "name": "Ori",
+            "url": "https://www.ori.co/",
+            "variants": {
+              "H200 (Ori)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.9,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.ori.co/"
+        }
+      }
+    },
+    "PrimeIntellect": {
+      "source_file": "primeintellect_h200_prices.json",
+      "price_per_hour": 1.55,
+      "data": {
+        "timestamp": "2026-01-06 17:48:57",
+        "provider": "PrimeIntellect",
+        "providers": {
+          "PrimeIntellect": {
+            "name": "Prime Intellect",
+            "url": "https://app.primeintellect.ai/dashboard/create-cluster?gpu_type=H200_141GB&image=ubuntu_22_cuda_12&location=Cheapest&pricing_type=Cheapest&quantity=1&security=Cheapest",
+            "variants": {
+              "H200 SXM5 Spot (PrimeIntellect)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 1.55,
+                "currency": "USD",
+                "availability": "spot"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Spot Instance",
+          "gpu_model": "NVIDIA H200 SXM5",
+          "gpu_memory": "141GB",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "Spot",
+          "spot_price": 1.55,
+          "secure_price": 3.84,
+          "source": "https://app.primeintellect.ai/dashboard/create-cluster"
+        }
+      }
+    },
+    "RunPod": {
+      "source_file": "runpod_h200_prices.json",
+      "price_per_hour": 3.59,
+      "data": {
+        "timestamp": "2026-01-02 14:27:04",
+        "provider": "RunPod",
+        "providers": {
+          "RunPod": {
+            "name": "RunPod",
+            "url": "https://www.runpod.io/pricing",
+            "variants": {
+              "H200 (RunPod)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 3.59,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.runpod.io/pricing"
+        }
+      }
+    },
+    "Sesterce": {
+      "source_file": "sesterce_h200_prices.json",
+      "price_per_hour": 2.25,
+      "data": {
+        "timestamp": "2026-01-02 14:26:54",
+        "provider": "Sesterce",
+        "providers": {
+          "Sesterce": {
+            "name": "Sesterce",
+            "url": "https://www.sesterce.com/pricing",
+            "variants": {
+              "H200 (Sesterce)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.25,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.sesterce.com/pricing"
+        }
+      }
+    },
+    "Shadeform": {
+      "source_file": "shadeform_h200_prices.json",
+      "price_per_hour": 2.25,
+      "data": {
+        "timestamp": "2026-01-05 22:06:45",
+        "provider": "Shadeform",
+        "providers": {
+          "Shadeform": {
+            "name": "Shadeform",
+            "url": "https://www.shadeform.ai/",
+            "variants": {
+              "H200x8 (Shadeform)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.25,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "H200x8 Bare Metal",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "On-Demand",
+          "pricing_unit": "per GPU per hour",
+          "source": "https://www.shadeform.ai/"
+        }
+      }
+    },
+    "Siam.ai": {
+      "source_file": "siamai_h200_prices.json",
+      "price_per_hour": 2.99,
+      "data": {
+        "timestamp": "2026-01-05 21:51:17",
+        "provider": "Siam.ai",
+        "providers": {
+          "Siam.ai": {
+            "name": "Siam.ai",
+            "url": "https://siam.ai/nvidia-hseries/",
+            "variants": {
+              "H200 (Siam.ai)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.99,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "On-Demand GPU",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "On-Demand",
+          "source": "https://siam.ai/nvidia-hseries/"
+        }
+      }
+    },
+    "Spheron": {
+      "source_file": "spheron_h200_prices.json",
+      "price_per_hour": 1.88,
+      "data": {
+        "timestamp": "2026-01-05 21:23:27",
+        "provider": "Spheron",
+        "providers": {
+          "Spheron": {
+            "name": "Spheron Network",
+            "url": "https://www.spheron.network/",
+            "variants": {
+              "H200 141GB (Spheron)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 1.88,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Decentralized Compute",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB",
+          "ram": "200GB",
+          "vcpus": 16,
+          "storage": "465GB",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "On-Demand",
+          "source": "https://www.spheron.network/"
+        }
+      }
+    },
+    "Valdi": {
+      "source_file": "valdi_h200_prices.json",
+      "price_per_hour": 21.95,
+      "data": {
+        "timestamp": "2026-01-05 22:15:14",
+        "provider": "Valdi",
+        "providers": {
+          "Valdi": {
+            "name": "Valdi GPU Marketplace",
+            "url": "https://gpulist.valdi.ai/?gpu_type=h200&page=1",
+            "variants": {
+              "H200 (Valdi Avg)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 21.95,
+                "currency": "USD",
+                "availability": "marketplace"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "Various (8x H200)",
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 8,
+          "pricing_type": "Marketplace Aggregator",
+          "price_statistics": {
+            "average": 21.95,
+            "minimum": 18,
+            "maximum": 29.52,
+            "listing_count": 10,
+            "all_prices": [
+              21.5,
+              29.52,
+              20.24,
+              23,
+              25.6,
+              18.4,
+              18.5,
+              18,
+              22.25,
+              22.46
+            ]
+          },
+          "source": "https://gpulist.valdi.ai/?gpu_type=h200"
+        }
+      }
+    },
+    "VastAI": {
+      "source_file": "vastai_h200_prices.json",
+      "price_per_hour": 2.19,
+      "data": {
+        "timestamp": "2026-01-02 15:37:39",
+        "provider": "VastAI",
+        "providers": {
+          "VastAI": {
+            "name": "Vast.ai",
+            "url": "https://vast.ai/pricing",
+            "variants": {
+              "H200 (Vast.ai)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.19,
+                "currency": "USD",
+                "availability": "spot/on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "Spot/On-Demand (Dynamic)",
+          "source": "https://vast.ai/pricing"
+        }
+      }
+    },
+    "Verda": {
+      "source_file": "verda_h200_prices.json",
+      "price_per_hour": 2.99,
+      "data": {
+        "timestamp": "2026-01-05 21:08:16",
+        "provider": "Verda",
+        "providers": {
+          "Verda": {
+            "name": "Verda",
+            "url": "https://verda.com/h200-sxm5",
+            "variants": {
+              "H200 SXM5 (Verda)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 2.99,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "instance_type": "H200 SXM5",
+          "gpu_model": "NVIDIA H200 SXM5",
+          "gpu_memory": "141GB HBM3e",
+          "gpu_count_per_instance": 1,
+          "pricing_type": "On-Demand",
+          "on_demand_price": 2.99,
+          "spot_price": 2.99,
+          "location": "Europe",
+          "source": "https://verda.com/h200-sxm5"
+        }
+      }
+    },
+    "Vultr": {
+      "source_file": "vultr_h200_prices.json",
+      "price_per_hour": 1.99,
+      "data": {
+        "timestamp": "2026-01-02 15:38:40",
+        "provider": "Vultr",
+        "providers": {
+          "Vultr": {
+            "name": "Vultr",
+            "url": "https://www.vultr.com/pricing/",
+            "variants": {
+              "H200 (Vultr)": {
+                "gpu_model": "H200",
+                "gpu_memory": "141GB",
+                "price_per_hour": 1.99,
+                "currency": "USD",
+                "availability": "on-demand"
+              }
+            }
+          }
+        },
+        "notes": {
+          "gpu_model": "NVIDIA H200",
+          "gpu_memory": "141GB HBM3e",
+          "pricing_type": "On-Demand",
+          "source": "https://www.vultr.com/pricing/"
+        }
+      }
+    }
+  },
+  "price_summary": [
+    {
+      "provider": "Hyperbolic",
+      "price": 1.5
+    },
+    {
+      "provider": "PrimeIntellect",
+      "price": 1.55
+    },
+    {
+      "provider": "Spheron",
+      "price": 1.88
+    },
+    {
+      "provider": "Vultr",
+      "price": 1.99
+    },
+    {
+      "provider": "IonStream",
+      "price": 2.06
+    },
+    {
+      "provider": "Fal.ai",
+      "price": 2.1
+    },
+    {
+      "provider": "VastAI",
+      "price": 2.19
+    },
+    {
+      "provider": "Sesterce",
+      "price": 2.25
+    },
+    {
+      "provider": "Shadeform",
+      "price": 2.25
+    },
+    {
+      "provider": "FluidStack",
+      "price": 2.3
+    },
+    {
+      "provider": "Nebius",
+      "price": 2.3
+    },
+    {
+      "provider": "GMICloud",
+      "price": 2.5
+    },
+    {
+      "provider": "Akash",
+      "price": 2.9
+    },
+    {
+      "provider": "Ori",
+      "price": 2.9
+    },
+    {
+      "provider": "Civo",
+      "price": 2.99
+    },
+    {
+      "provider": "Siam.ai",
+      "price": 2.99
+    },
+    {
+      "provider": "Verda",
+      "price": 2.99
+    },
+    {
+      "provider": "AceCloud",
+      "price": 3.35
+    },
+    {
+      "provider": "ComputeThisHub",
+      "price": 3.5
+    },
+    {
+      "provider": "HyperStack",
+      "price": 3.5
+    },
+    {
+      "provider": "RunPod",
+      "price": 3.59
+    },
+    {
+      "provider": "JarvisLabs",
+      "price": 3.8
+    },
+    {
+      "provider": "Crusoe",
+      "price": 4.29
+    },
+    {
+      "provider": "HydraHost",
+      "price": 5.0
+    },
+    {
+      "provider": "AIME",
+      "price": 6.26
+    },
+    {
+      "provider": "CoreWeave",
+      "price": 6.5
+    },
+    {
+      "provider": "AWS",
+      "price": 7.91
+    },
+    {
+      "provider": "Iren",
+      "price": 9.7
+    },
+    {
+      "provider": "Oracle",
+      "price": 10.0
+    },
+    {
+      "provider": "LeaderGPU",
+      "price": 10.4
+    },
+    {
+      "provider": "GCP",
+      "price": 11.07
+    },
+    {
+      "provider": "Azure",
+      "price": 12.57
+    },
+    {
+      "provider": "Valdi",
+      "price": 21.95
+    }
+  ]
+}

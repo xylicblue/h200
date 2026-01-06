@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-06 17:48:57",
+  "provider": "PrimeIntellect",
+  "providers": {
+    "PrimeIntellect": {
+      "name": "Prime Intellect",
+      "url": "https://app.primeintellect.ai/dashboard/create-cluster?gpu_type=H200_141GB&image=ubuntu_22_cuda_12&location=Cheapest&pricing_type=Cheapest&quantity=1&security=Cheapest",
+      "variants": {
+        "H200 SXM5 Spot (PrimeIntellect)": {
+          "gpu_model": "H200",
+          "gpu_memory": "141GB",
+          "price_per_hour": 1.55,
+          "currency": "USD",
+          "availability": "spot"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "Spot Instance",
+    "gpu_model": "NVIDIA H200 SXM5",
+    "gpu_memory": "141GB",
+    "gpu_count_per_instance": 1,
+    "pricing_type": "Spot",
+    "spot_price": 1.55,
+    "secure_price": 3.84,
+    "source": "https://app.primeintellect.ai/dashboard/create-cluster"
+  }
+}

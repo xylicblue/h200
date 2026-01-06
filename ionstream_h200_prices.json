@@ -1,19 +1,29 @@
 {
-  "timestamp": "2026-01-02 16:57:15",
+  "timestamp": "2026-01-06 17:03:03",
   "provider": "IonStream",
   "providers": {
     "IonStream": {
-      "name": "IonStream",
-      "url": "https://ionstream.ai/",
+      "name": "IonStream AI",
+      "url": "https://ionstream.ai/solutions/hosted-h200/",
       "variants": {
-        "H200 (IonStream)": {
+        "H200 8-GPU Bare Metal (IonStream)": {
           "gpu_model": "H200",
           "gpu_memory": "141GB",
-          "price_per_hour": 2.55,
+          "price_per_hour": 2.06,
           "currency": "USD",
           "availability": "on-demand"
         }
       }
     }
+  },
+  "notes": {
+    "instance_type": "8-GPU Bare Metal",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "141GB HBM3e",
+    "memory_bandwidth": "4.8TB/s peak",
+    "gpu_count_per_instance": 8,
+    "pricing_type": "On-Demand",
+    "pricing_unit": "per GPU per hour",
+    "source": "https://ionstream.ai/solutions/hosted-h200/"
   }
 }

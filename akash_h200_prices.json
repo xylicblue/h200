@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-01-06 17:48:24",
+  "provider": "Akash",
+  "providers": {
+    "Akash": {
+      "name": "Akash Network",
+      "url": "https://akash.network/pricing/gpus/",
+      "variants": {
+        "H200 SXM5 (Akash)": {
+          "gpu_model": "H200",
+          "gpu_memory": "141GB",
+          "price_per_hour": 2.9,
+          "currency": "USD",
+          "availability": "decentralized"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "Decentralized Cloud",
+    "gpu_model": "NVIDIA H200 SXM5",
+    "gpu_memory": "141Gi",
+    "gpu_count_per_instance": 1,
+    "pricing_type": "Variable (marketplace)",
+    "price_statistics": {
+      "average": 2.9,
+      "minimum": 2.8,
+      "maximum": 2.9
+    },
+    "availability": {
+      "available": 538,
+      "total": 80
+    },
+    "source": "https://akash.network/pricing/gpus/"
+  }
+}

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-IonStream H200 GPU Price Scraper
-Extracts H200 pricing from IonStream AI
+Civo H200 GPU Price Scraper
+Extracts H200 pricing from Civo Cloud
 
-IonStream offers 8-GPU H200 bare metal servers on-demand.
+Civo offers H200 GPUs in Small (1x) and Extra Large (8x) configurations.
+Prices vary based on commitment period (on-demand to 36 months).
 
-Reference: https://ionstream.ai/solutions/hosted-h200/
+Reference: https://www.civo.com/ai/h200-gpu
 """
 
 import requests
@@ -16,12 +17,12 @@ import time
 from typing import Dict, Optional
 
 
-class IonStreamH200Scraper:
-    """Scraper for IonStream AI H200 GPU pricing"""
+class CivoH200Scraper:
+    """Scraper for Civo Cloud H200 GPU pricing"""
     
     def __init__(self):
-        self.name = "IonStream"
-        self.base_url = "https://ionstream.ai/solutions/hosted-h200/"
+        self.name = "Civo"
+        self.base_url = "https://www.civo.com/ai/h200-gpu"
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -31,7 +32,7 @@ class IonStreamH200Scraper:
         }
     
     def get_h200_prices(self) -> Dict[str, str]:
-        """Main method to extract H200 prices from IonStream"""
+        """Main method to extract H200 prices from Civo"""
         print(f"🔍 Fetching {self.name} H200 pricing...")
         print("=" * 80)
         
@@ -39,7 +40,7 @@ class IonStreamH200Scraper:
         
         # Try multiple methods
         methods = [
-            ("IonStream Website Scraping", self._try_pricing_page),
+            ("Civo Website Scraping", self._try_pricing_page),
             ("Selenium Scraper", self._try_selenium_scraper),
         ]
         
@@ -58,7 +59,7 @@ class IonStreamH200Scraper:
                 continue
         
         if not h200_prices:
-            print("\n❌ Failed to extract H200 pricing from IonStream")
+            print("\n❌ Failed to extract H200 pricing from Civo")
             return {}
         
         print(f"\n✅ Final extraction complete")
@@ -70,13 +71,13 @@ class IonStreamH200Scraper:
             return False
         
         for variant, price_str in prices.items():
-            if 'Error' in variant:
+            if 'Error' in variant or variant.startswith('_'):
                 continue
             try:
                 price_match = re.search(r'\$?([0-9.]+)', str(price_str))
                 if price_match:
                     price = float(price_match.group(1))
-                    # IonStream H200 pricing is around $2-5/hr
+                    # Civo H200 pricing is around $2-5/hr for small instance
                     if 1.0 < price < 10.0:
                         return True
             except:
@@ -84,7 +85,7 @@ class IonStreamH200Scraper:
         return False
     
     def _try_pricing_page(self) -> Dict[str, str]:
-        """Scrape IonStream website for H200 pricing"""
+        """Scrape Civo website for H200 pricing"""
         h200_prices = {}
         
         try:
@@ -121,36 +122,42 @@ class IonStreamH200Scraper:
         """Extract H200 prices from page content"""
         prices = {}
         
-        # Method 1: Look for order-item__price class
-        price_elements = soup.find_all('span', class_='order-item__price')
-        for elem in price_elements:
+        # Method 1: Look for sm-price class (commitment price for small plan)
+        sm_price_elements = soup.find_all('span', class_='sm-price')
+        for elem in sm_price_elements:
             price_text = elem.get_text().strip()
-            price_match = re.search(r'\$([0-9.]+)\s*per\s*hour', price_text, re.IGNORECASE)
+            price_match = re.search(r'\$([0-9.]+)', price_text)
             if price_match:
                 price = float(price_match.group(1))
                 if 1.0 < price < 10.0:
-                    print(f"        ✓ Found price in order-item__price: ${price:.2f}/hr")
-                    prices["H200 8-GPU Bare Metal (IonStream)"] = f"${price:.2f}/hr"
+                    print(f"        ✓ Found sm-price: ${price:.2f}/hr")
+                    prices["H200 Small 1x (Civo)"] = f"${price:.2f}/hr"
                     return prices
         
-        # Method 2: Look in order-item__price-wrap
-        price_wraps = soup.find_all('div', class_='order-item__price-wrap')
-        for wrap in price_wraps:
-            wrap_text = wrap.get_text()
-            price_match = re.search(r'\$([0-9.]+)\s*per\s*hour', wrap_text, re.IGNORECASE)
-            if price_match:
-                price = float(price_match.group(1))
-                if 1.0 < price < 10.0:
-                    print(f"        ✓ Found price in price-wrap: ${price:.2f}/hr")
-                    prices["H200 8-GPU Bare Metal (IonStream)"] = f"${price:.2f}/hr"
-                    return prices
+        # Method 2: Look in table structure
+        tables = soup.find_all('table')
+        for table in tables:
+            rows = table.find_all('tr')
+            for row in rows:
+                row_text = row.get_text()
+                if 'Small' in row_text and 'H200' in row_text:
+                    cells = row.find_all('td')
+                    for cell in cells:
+                        cell_text = cell.get_text()
+                        # Look for the lower price (commitment price)
+                        price_matches = re.findall(r'\$([0-9.]+)', cell_text)
+                        for price_str in price_matches:
+                            price = float(price_str)
+                            if 1.0 < price < 10.0:
+                                print(f"        ✓ Found in table: ${price:.2f}/hr")
+                                prices["H200 Small 1x (Civo)"] = f"${price:.2f}/hr"
+                                return prices
         
-        # Method 3: Direct text pattern matching
+        # Method 3: Pattern matching in text
         patterns = [
-            r'\$([0-9.]+)\s*per\s*hour',
-            r'Starting\s+at\s+\$([0-9.]+)\s*per\s*hour',
-            r'\$([0-9.]+)/hr',
-            r'\$([0-9.]+)\s*/\s*hour',
+            r'\$([0-9.]+)\s*Per\s*hour',
+            r'\$([0-9.]+)\s*/\s*hr',
+            r'Small.*?\$([0-9.]+)',
         ]
         
         for pattern in patterns:
@@ -159,8 +166,8 @@ class IonStreamH200Scraper:
                 try:
                     price = float(price_str)
                     if 1.0 < price < 10.0:
-                        print(f"        ✓ Found price via pattern: ${price:.2f}/hr")
-                        prices["H200 8-GPU Bare Metal (IonStream)"] = f"${price:.2f}/hr"
+                        print(f"        ✓ Found via pattern: ${price:.2f}/hr")
+                        prices["H200 Small 1x (Civo)"] = f"${price:.2f}/hr"
                         return prices
                 except ValueError:
                     continue
@@ -168,7 +175,7 @@ class IonStreamH200Scraper:
         return prices
     
     def _try_selenium_scraper(self) -> Dict[str, str]:
-        """Use Selenium to scrape JavaScript-loaded pricing from IonStream"""
+        """Use Selenium to scrape JavaScript-loaded pricing from Civo"""
         h200_prices = {}
         
         try:
@@ -189,7 +196,7 @@ class IonStreamH200Scraper:
             driver = webdriver.Chrome(options=chrome_options)
             
             try:
-                print(f"    Loading IonStream page...")
+                print(f"    Loading Civo page...")
                 driver.get(self.base_url)
                 
                 print("    Waiting for dynamic content to load...")
@@ -197,38 +204,51 @@ class IonStreamH200Scraper:
                 
                 # Use JavaScript to extract H200 pricing
                 script = """
-                    // Look for order-item__price class
-                    const priceElements = document.querySelectorAll('span.order-item__price');
-                    for (const elem of priceElements) {
-                        const text = elem.innerText;
-                        const match = text.match(/\\$([0-9.]+)\\s*per\\s*hour/i);
+                    // Look for sm-price class (commitment price for small plan)
+                    const smPrice = document.querySelector('.sm-price');
+                    if (smPrice) {
+                        const text = smPrice.innerText;
+                        const match = text.match(/\\$([0-9.]+)/);
                         if (match) {
-                            return { price: match[1], source: 'order-item__price' };
+                            return {
+                                price: match[1],
+                                source: 'sm-price'
+                            };
                         }
                     }
                     
-                    // Look in price-wrap
-                    const wraps = document.querySelectorAll('div.order-item__price-wrap');
-                    for (const wrap of wraps) {
-                        const text = wrap.innerText;
-                        const match = text.match(/\\$([0-9.]+)\\s*per\\s*hour/i);
-                        if (match) {
-                            return { price: match[1], source: 'price-wrap' };
+                    // Look in the pricing table
+                    const table = document.querySelector('table');
+                    if (table) {
+                        const rows = table.querySelectorAll('tr');
+                        for (const row of rows) {
+                            const text = row.innerText;
+                            if (text.includes('Small') && text.includes('H200')) {
+                                // Find the lower price (commitment)
+                                const prices = text.match(/\\$([0-9.]+)/g);
+                                if (prices && prices.length > 0) {
+                                    // Get the lowest price
+                                    const numPrices = prices.map(p => parseFloat(p.replace('$', '')));
+                                    const minPrice = Math.min(...numPrices.filter(p => p > 1 && p < 10));
+                                    if (minPrice && isFinite(minPrice)) {
+                                        return {
+                                            price: minPrice.toString(),
+                                            source: 'table-small-row'
+                                        };
+                                    }
+                                }
+                            }
                         }
                     }
                     
-                    // Fallback: search page text
+                    // Fallback: Find any price near "Per hour" text
                     const bodyText = document.body.innerText;
-                    const patterns = [
-                        /\\$([0-9.]+)\\s*per\\s*hour/i,
-                        /Starting\\s+at\\s+\\$([0-9.]+)/i
-                    ];
-                    
-                    for (const pattern of patterns) {
-                        const match = bodyText.match(pattern);
-                        if (match) {
-                            return { price: match[1], source: 'text' };
-                        }
+                    const match = bodyText.match(/\\$([0-9.]+)\\s*Per\\s*hour/i);
+                    if (match) {
+                        return {
+                            price: match[1],
+                            source: 'per-hour-text'
+                        };
                     }
                     
                     return null;
@@ -239,7 +259,7 @@ class IonStreamH200Scraper:
                 if result and result.get('price'):
                     price = float(result['price'])
                     if 1.0 < price < 10.0:
-                        h200_prices["H200 8-GPU Bare Metal (IonStream)"] = f"${price:.2f}/hr"
+                        h200_prices["H200 Small 1x (Civo)"] = f"${price:.2f}/hr"
                         print(f"    ✓ Found: ${price:.2f}/hr (source: {result.get('source', 'unknown')})")
                 else:
                     print("    ⚠️  Could not find H200 pricing via JavaScript")
@@ -262,28 +282,29 @@ class IonStreamH200Scraper:
         
         return h200_prices
     
-    def save_to_json(self, prices: Dict[str, str], filename: str = "ionstream_h200_prices.json") -> bool:
+    def save_to_json(self, prices: Dict[str, str], filename: str = "civo_h200_prices.json") -> bool:
         """Save results to a JSON file"""
         try:
             # Extract price
             price_value = 0.0
-            for variant, price_str in prices.items():
-                price_match = re.search(r'\$([0-9.]+)', price_str)
-                if price_match:
-                    price_value = float(price_match.group(1))
-                    break
+            for key, value in prices.items():
+                if not key.startswith("_"):
+                    price_match = re.search(r'\$([0-9.]+)', str(value))
+                    if price_match:
+                        price_value = float(price_match.group(1))
+                        break
             
             output_data = {
                 "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
                 "provider": self.name,
                 "providers": {
-                    "IonStream": {
-                        "name": "IonStream AI",
+                    "Civo": {
+                        "name": "Civo Cloud",
                         "url": self.base_url,
                         "variants": {
-                            "H200 8-GPU Bare Metal (IonStream)": {
+                            "H200 Small 1x (Civo)": {
                                 "gpu_model": "H200",
-                                "gpu_memory": "141GB",
+                                "gpu_memory": "80GB",
                                 "price_per_hour": round(price_value, 2),
                                 "currency": "USD",
                                 "availability": "on-demand"
@@ -292,14 +313,22 @@ class IonStreamH200Scraper:
                     }
                 },
                 "notes": {
-                    "instance_type": "8-GPU Bare Metal",
+                    "instance_type": "Small (1x GPU)",
                     "gpu_model": "NVIDIA H200",
-                    "gpu_memory": "141GB HBM3e",
-                    "memory_bandwidth": "4.8TB/s peak",
-                    "gpu_count_per_instance": 8,
-                    "pricing_type": "On-Demand",
-                    "pricing_unit": "per GPU per hour",
-                    "source": "https://ionstream.ai/solutions/hosted-h200/"
+                    "gpu_memory": "80GB",
+                    "ram": "192 GB",
+                    "vcpus": 48,
+                    "storage": "400 GB NVMe",
+                    "gpu_count_per_instance": 1,
+                    "pricing_type": "Commitment (36 months)",
+                    "on_demand_price": 3.49,
+                    "commitment_prices": {
+                        "6_months": 3.29,
+                        "12_months": 3.19,
+                        "24_months": 3.09,
+                        "36_months": 2.99
+                    },
+                    "source": "https://www.civo.com/ai/h200-gpu"
                 }
             }
             
@@ -315,13 +344,13 @@ class IonStreamH200Scraper:
 
 
 def main():
-    """Main function to run the IonStream H200 scraper"""
-    print("🚀 IonStream AI H200 GPU Pricing Scraper")
+    """Main function to run the Civo H200 scraper"""
+    print("🚀 Civo Cloud H200 GPU Pricing Scraper")
     print("=" * 80)
-    print("Note: IonStream offers 8-GPU H200 bare metal servers on-demand")
+    print("Note: Civo offers commitment-based pricing (best rate at 36 months)")
     print("=" * 80)
     
-    scraper = IonStreamH200Scraper()
+    scraper = CivoH200Scraper()
     
     start_time = time.time()
     prices = scraper.get_h200_prices()
@@ -334,7 +363,8 @@ def main():
         print(f"\n✅ Successfully extracted H200 pricing:\n")
         
         for variant, price in sorted(prices.items()):
-            print(f"  • {variant:50s} {price}")
+            if not variant.startswith('_'):
+                print(f"  • {variant:50s} {price}")
         
         # Save results to JSON
         scraper.save_to_json(prices)

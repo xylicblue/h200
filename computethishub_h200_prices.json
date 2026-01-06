@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-06 17:15:15",
+  "provider": "ComputeThisHub",
+  "providers": {
+    "ComputeThisHub": {
+      "name": "ComputeThisHub",
+      "url": "https://computethishub.com/",
+      "variants": {
+        "H200 4x (ComputeThisHub)": {
+          "gpu_model": "H200",
+          "gpu_memory": "140GB",
+          "price_per_hour": 3.5,
+          "currency": "USD",
+          "availability": "dedicated"
+        }
+      }
+    }
+  },
+  "notes": {
+    "instance_type": "Dedicated Bare Metal",
+    "gpu_model": "NVIDIA H200",
+    "gpu_memory": "140GB",
+    "gpu_count_per_instance": 4,
+    "total_instance_price": 14.0,
+    "pricing_type": "Dedicated",
+    "location": "Europe",
+    "source": "https://computethishub.com/"
+  }
+}

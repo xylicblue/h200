@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-01-06 18:08:25",
+  "final_index_price": 3.61,
+  "hyperscaler_component": 2.2938,
+  "neocloud_component": 1.3189,
+  "hyperscaler_count": 5,
+  "neocloud_count": 28,
+  "hyperscaler_details": [
+    {
+      "provider": "AWS",
+      "original_price": 7.91,
+      "discount_rate": 0.8451231468373276,
+      "effective_price": 2.5620607268133915,
+      "relative_weight": 0.41,
+      "absolute_weight": 0.2665,
+      "weighted_contribution": 0.6827891836957689
+    },
+    {
+      "provider": "Azure",
+      "original_price": 12.57,
+      "discount_rate": 0.7901841463284676,
+      "effective_price": 4.62390822452093,
+      "relative_weight": 0.33,
+      "absolute_weight": 0.21450000000000002,
+      "weighted_contribution": 0.9918283141597396
+    },
+    {
+      "provider": "CoreWeave",
+      "original_price": 6.5,
+      "discount_rate": 0.8882113452618143,
+      "effective_price": 1.8813010046385656,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.006500000000000001,
+      "weighted_contribution": 0.012228456530150677
+    },
+    {
+      "provider": "Google Cloud",
+      "original_price": 11.07,
+      "discount_rate": 0.8277624096934582,
+      "effective_price": 3.739336099754735,
+      "relative_weight": 0.17,
+      "absolute_weight": 0.11050000000000001,
+      "weighted_contribution": 0.41319663902289827
+    },
+    {
+      "provider": "Oracle",
+      "original_price": 10.0,
+      "discount_rate": 0.7841764234357851,
+      "effective_price": 3.7265886125137193,
+      "relative_weight": 0.08,
+      "absolute_weight": 0.052000000000000005,
+      "weighted_contribution": 0.1937826078507134
+    }
+  ],
+  "neocloud_details": [
+    {
+      "provider": "AceCloud",
+      "price": 3.35,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.011725
+    },
+    {
+      "provider": "AIME",
+      "price": 6.26,
+      "relative_weight": 0.015,
+      "absolute_weight": 0.0052499999999999995,
+      "weighted_contribution": 0.032865
+    },
+    {
+      "provider": "Akash",
+      "price": 2.9,
+      "relative_weight": 0.03,
+      "absolute_weight": 0.010499999999999999,
+      "weighted_contribution": 0.030449999999999994
+    },
+    {
+      "provider": "Civo",
+      "price": 2.99,
+      "relative_weight": 0.04,
+      "absolute_weight": 0.013999999999999999,
+      "weighted_contribution": 0.04186
+    },
+    {
+      "provider": "ComputeThisHub",
+      "price": 3.5,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.012249999999999999
+    },
+    {
+      "provider": "Crusoe",
+      "price": 4.29,
+      "relative_weight": 0.08,
+      "absolute_weight": 0.027999999999999997,
+      "weighted_contribution": 0.12011999999999999
+    },
+    {
+      "provider": "Fal.ai",
+      "price": 2.1,
+      "relative_weight": 0.025,
+      "absolute_weight": 0.008749999999999999,
+      "weighted_contribution": 0.018375
+    },
+    {
+      "provider": "FluidStack",
+      "price": 2.3,
+      "relative_weight": 0.05,
+      "absolute_weight": 0.017499999999999998,
+      "weighted_contribution": 0.040249999999999994
+    },
+    {
+      "provider": "GMICloud",
+      "price": 2.5,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.0043749999999999995
+    },
+    {
+      "provider": "HydraHost",
+      "price": 5.0,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.008749999999999999
+    },
+    {
+      "provider": "Hyperbolic",
+      "price": 1.5,
+      "relative_weight": 0.02,
+      "absolute_weight": 0.006999999999999999,
+      "weighted_contribution": 0.010499999999999999
+    },
+    {
+      "provider": "HyperStack",
+      "price": 3.5,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.006124999999999999
+    },
+    {
+      "provider": "IonStream",
+      "price": 2.06,
+      "relative_weight": 0.015,
+      "absolute_weight": 0.0052499999999999995,
+      "weighted_contribution": 0.010815
+    },
+    {
+      "provider": "Iren",
+      "price": 9.7,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.016974999999999997
+    },
+    {
+      "provider": "JarvisLabs",
+      "price": 3.8,
+      "relative_weight": 0.02,
+      "absolute_weight": 0.006999999999999999,
+      "weighted_contribution": 0.026599999999999995
+    },
+    {
+      "provider": "LeaderGPU",
+      "price": 10.4,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.036399999999999995
+    },
+    {
+      "provider": "Nebius",
+      "price": 2.3,
+      "relative_weight": 0.1,
+      "absolute_weight": 0.034999999999999996,
+      "weighted_contribution": 0.08049999999999999
+    },
+    {
+      "provider": "Ori",
+      "price": 2.9,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.01015
+    },
+    {
+      "provider": "PrimeIntellect",
+      "price": 1.55,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.0027124999999999996
+    },
+    {
+      "provider": "RunPod",
+      "price": 3.59,
+      "relative_weight": 0.06,
+      "absolute_weight": 0.020999999999999998,
+      "weighted_contribution": 0.07538999999999998
+    },
+    {
+      "provider": "Sesterce",
+      "price": 2.25,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.007875
+    },
+    {
+      "provider": "Shadeform",
+      "price": 2.25,
+      "relative_weight": 0.04,
+      "absolute_weight": 0.013999999999999999,
+      "weighted_contribution": 0.0315
+    },
+    {
+      "provider": "Siam.ai",
+      "price": 2.99,
+      "relative_weight": 0.01,
+      "absolute_weight": 0.0034999999999999996,
+      "weighted_contribution": 0.010465
+    },
+    {
+      "provider": "Spheron",
+      "price": 1.88,
+      "relative_weight": 0.03,
+      "absolute_weight": 0.010499999999999999,
+      "weighted_contribution": 0.019739999999999997
+    },
+    {
+      "provider": "Valdi",
+      "price": 21.95,
+      "relative_weight": 0.03,
+      "absolute_weight": 0.010499999999999999,
+      "weighted_contribution": 0.23047499999999996
+    },
+    {
+      "provider": "VastAI",
+      "price": 2.19,
+      "relative_weight": 0.005,
+      "absolute_weight": 0.0017499999999999998,
+      "weighted_contribution": 0.0038324999999999995
+    },
+    {
+      "provider": "Verda",
+      "price": 2.99,
+      "relative_weight": 0.025,
+      "absolute_weight": 0.008749999999999999,
+      "weighted_contribution": 0.026162499999999998
+    },
+    {
+      "provider": "Vultr",
+      "price": 1.99,
+      "relative_weight": 0.07,
+      "absolute_weight": 0.0245,
+      "weighted_contribution": 0.048755
+    }
+  ],
+  "weights": {
+    "hyperscaler_total": 0.65,
+    "neocloud_total": 0.35,
+    "hyperscaler_individual": {
+      "AWS": 0.41,
+      "Azure": 0.33,
+      "Google Cloud": 0.17,
+      "Oracle": 0.08,
+      "CoreWeave": 0.01
+    },
+    "discount_range": {
+      "min": 0.7,
+      "max": 0.9
+    },
+    "discount_blend": {
+      "discounted_weight": 0.8,
+      "full_price_weight": 0.2
+    }
+  },
+  "base_config": {
+    "gpu_model": "H200",
+    "gpu_memory_gb": 141,
+    "memory_bandwidth_tb_s": 4.8,
+    "fp8_tflops": 3958,
+    "form_factor": "SXM5"
+  }
+}
